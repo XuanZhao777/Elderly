@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: elderly-care-platform
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/elderly_care?useSSL=false&serverTimezone=UTC&characterEncoding=utf8mb4
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        use_sql_comments: true
+    show-sql: false
+  
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      indent-output: true
+    deserialization:
+      fail-on-unknown-properties: false
+  
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 2000ms
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+jwt:
+  secret: mySecretKeyForElderlyCarePlatformThatIsAtLeast32CharactersLong
+  expiration: 86400000
+  refresh-expiration: 604800000
+
+logging:
+  level:
+    root: INFO
+    com.elderly.care: DEBUG
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
