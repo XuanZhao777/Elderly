@@ -1,0 +1,20 @@
+.profile-container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.profile-header h2 {
+  color: white;
+  margin: 0;
+}
+
+.profile-header .ant-statistic-title {
+  color: rgba(255, 255, 255, 0.8);
+}

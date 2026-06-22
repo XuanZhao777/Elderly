@@ -1,0 +1,43 @@
+.home-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.elderly-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.elderly-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.elderly-info {
+  padding: 12px 0;
+}
+
+.elderly-info h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.risk-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.risk-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.distance {
+  color: #666;
+  margin-bottom: 8px;
+}

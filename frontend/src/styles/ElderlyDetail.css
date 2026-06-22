@@ -1,0 +1,13 @@
+.elderly-detail-container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tags {
+  margin: 16px 0;
+}
+
+.tags .ant-tag {
+  margin-bottom: 8px;
+}
